@@ -3,6 +3,7 @@ import subprocess as sub
 import argparse
 import re
 import string
+import uuid
 
 def change_mac_windwos(new_mac_address):
 
@@ -39,7 +40,10 @@ def check_mac_linux(iface):
     return re.search("ether (.+) ", output).group().split()[1].strip()
 
 def check_mac_windows():
-    pass
+    print ("The MAC address in formatted way is : ", end="")
+    print (':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff)
+    for ele in range(0,8*6,8)][::-1]))
+
 
 #################### EVERYTHING FROM HERE DOWNWARDS IS JUST WINDOWS MAC CHANGING. I HAVE NO IDEA WHAT IS GOING ON HERE OR HOW IT WORKS. DON'T SCROLL DOWN YOU WILL REGRET IT ###############################################
 
