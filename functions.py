@@ -2,6 +2,7 @@ import scapy.all as scapy
 import requests
 import socket
 import re
+import time
 
 def find_ip_range():
     hostname = socket.gethostname()
@@ -25,4 +26,3 @@ def arp(ip):
         ip, mac = i[1].psrc, i[1].hwsrc
         dict[count] = [ip, mac, requests.get("https://macvendors.co/api/vendorname/{i[1.hwsrc]}").text]
     return dict
-
