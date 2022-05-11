@@ -1,5 +1,5 @@
 from functions import arp
-from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows, change_mac_windows
+from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows
 
 
 givenip = input("IP RANGE. | Leave empty for auto detection >>> ")
