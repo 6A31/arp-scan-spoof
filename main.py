@@ -39,7 +39,7 @@ if choice.lower() == "y":
             check_mac_windows()
         except:
             print("Failed to check MAC")
-
+print("\nPLEASE NOTE IT CAN TAKE UP TO A MINUTE FOR YOUR DEVICE TO RECONNECT AFTER CHANGING ITS MAC ADDRESS!\n")
 choice = input("Would you like to test the Internet connection? y/n >>> ")
 
 if choice.lower() == "y":

@@ -29,7 +29,6 @@ def arp(ip):
     request = br/arp_r
     answered, unanswered = scapy.srp(request, timeout=1)
     y = 0
-    print("Checking vendors....")
     for count, i in enumerate(answered):
         ip, mac = i[1].psrc, i[1].hwsrc
         dict[count] = [ip, mac, lookup_vendor(i[1].hwsrc)]
@@ -41,7 +40,7 @@ def lookup_vendor(mac):
     except:
         return "No Vendor"
 
-def check_conn(attempts, delay=0.5):
+def check_conn(attempts, delay=1.5):
     for i in range(attempts):
         try:
             requests.get("https://google.com", timeout=3000)
