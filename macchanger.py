@@ -24,7 +24,7 @@ def check_mac_linux(iface):
     return re.search("ether (.+) ", output).group().split()[1].strip()
 
 def check_mac_windows():
-    print (f"Your current mac address is: {Fore.GREEN}", end="")
+    print (f"Your current MAC address is: {Fore.GREEN}", end="")
     print (':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff)
     for ele in range(0,8*6,8)][::-1]))
 
@@ -45,7 +45,7 @@ def change_mac_windows(new_mac):
     ##################################################################################################
 
 
-    print(Fore.RED + "Warning! The mac-changer script was not build by me. It's made by David Bombal\nhttps://www.davidbombal.com" + Style.RESET_ALL)
+    print(Fore.RED + "Warning! The MAC-changer script was not build by me. It's made by David Bombal\nhttps://www.davidbombal.com" + Style.RESET_ALL)
     print("##############################################################")
     print("1) Make sure you run this script with administrator privileges")
     print("2) Make sure that the WiFi adapter is connected to a network")
@@ -113,7 +113,7 @@ def change_mac_windows(new_mac):
 
     # Create a simple menu so the user can pick a MAC address to use
     while True:
-        print("Which MAC address do you want to use? This will change the Network Card's MAC address.\n" + Fore.RED + "This is the mac address you selected earlier. Select it with " + Fore.GREEN + ' "0"' + Style.RESET_ALL)
+        print("Which MAC address do you want to use? This will change the Network Card's MAC address.\n" + Fore.RED + "This is the MAC address you selected earlier. Select it with " + Fore.GREEN + ' "0"' + Style.RESET_ALL)
         for index, item in enumerate(mac_to_change_to):
             print(f"{index} - Mac Address: {item}")
 
@@ -162,7 +162,7 @@ def change_mac_windows(new_mac):
                             if name == "NetCfgInstanceId" and value == mac_addresses[int(option)][1]:
                                 new_mac_address = mac_to_change_to[int(update_option)]
                                 winreg.SetValueEx(regkey, "NetworkAddress", 0, winreg.REG_SZ, new_mac_address)
-                                print("Successly matched Transport Number")
+                                print("Successfully matched Transport Number")
                                 # get list of adapters and find index of adapter you want to disable.
                                 break
                     except WindowsError:
@@ -172,7 +172,7 @@ def change_mac_windows(new_mac):
 
 
     # Code to disable and enable Wireless devicess
-    run_disable_enable = input("Do you want to disable and reenable your wireless device(s). Press Y or y to continue:")
+    run_disable_enable = input("Do you want to disable and re-enable your wireless device(s). Press Y or y to continue:")
     # Changes the input to lowercase and compares to y. If not y the while function which contains the last part will never run.
     if run_disable_enable.lower() == 'y':
         run_last_part = True

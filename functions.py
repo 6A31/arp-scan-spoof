@@ -1,8 +1,13 @@
 import scapy.all as scapy
-import requests
 import socket
 import re
 from colorama import Fore, Style
+
+from mac_vendor_lookup import MacLookup
+
+# UPDATE MAC VENDOR LIST #
+#mac = MacLookup()
+#mac.update_vendors()  # <- This can take a few seconds for the download
 
 def find_ip_range():
     hostname = socket.gethostname()
@@ -25,5 +30,11 @@ def arp(ip):
     print("Checking vendors....")
     for count, i in enumerate(answered):
         ip, mac = i[1].psrc, i[1].hwsrc
-        dict[count] = [ip, mac, requests.get("https://macvendors.co/api/vendorname/{i[1.hwsrc]}").text]
+        dict[count] = [ip, mac, lookup_vendor(i[1].hwsrc)]
     return dict
+
+def lookup_vendor(mac):
+    try:
+        return MacLookup().lookup(mac)
+    except:
+        return "No Vendor"
