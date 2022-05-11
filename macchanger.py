@@ -44,11 +44,8 @@ def change_mac_windows(new_mac):
     #                                                                                                #
     ##################################################################################################
 
-    import subprocess
-    import winreg
-    import re
-    import codecs
 
+    print(Fore.RED + "Warning! The mac-changer script was not build by me. It's made by David Bombal\nhttps://www.davidbombal.com" + Style.RESET_ALL)
     print("##############################################################")
     print("1) Make sure you run this script with administrator privileges")
     print("2) Make sure that the WiFi adapter is connected to a network")
