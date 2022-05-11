@@ -22,6 +22,7 @@ def arp(ip):
     request = br/arp_r
     answered, unanswered = scapy.srp(request, timeout=1)
     y = 0
+    print("Checking vendors....")
     for count, i in enumerate(answered):
         ip, mac = i[1].psrc, i[1].hwsrc
         dict[count] = [ip, mac, requests.get("https://macvendors.co/api/vendorname/{i[1.hwsrc]}").text]
