@@ -1,5 +1,5 @@
 from functions import arp
-from macchanger import change_mac_windwos, change_mac_linux, check_mac_linux, check_mac_windows
+from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows, change_mac_windows
 
 
 givenip = input("IP RANGE. | Leave empty for auto detection >>> ")
@@ -21,7 +21,7 @@ if os == "2":
         print("Failed.")
 if os == "1":
     try:
-        change_mac_windwos(mac)
+        change_mac_windows(mac)
     except:
         print("Failed.")
 
