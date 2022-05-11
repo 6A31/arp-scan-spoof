@@ -21,7 +21,7 @@ The script was tested on **Windows 10 and Linux (Ubuntu)**.
 > If you get an `Module Error` try installing the module with `pip install modulenamhere`
 
 # Download
-Download the **COMING SOON** [.EXE](https://placeholder.com) from the release page or clone the repository and run **`main.py`**
+Download the **COMING SOON** [.EXE](https://github.com/ScobraScope/arp-scan-spoof/releases/tag/stable) from the release page or clone the repository and run **`main.py`**
 
 
 ## Windows
