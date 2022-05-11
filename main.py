@@ -1,6 +1,7 @@
 from functions import arp
 from macchanger import change_mac_windwos, change_mac_linux, check_mac_linux, check_mac_windows
 
+
 givenip = input("IP RANGE. | Leave empty for auto detection >>> ")
 
 devices = arp(givenip)
@@ -9,9 +10,9 @@ print("\nN° \t IP \t\t MAC \t\t\t VENDOR\n")
 for key in devices:
     print(f"{key} \t {devices.get(key)[0]} \t {devices.get(key)[1]} \t {devices.get(key)[2]}")
 
-choice = int(input("Choose a device to spoof. >>> "))
+choice = int(input("\nChoose a device to spoof. >>> "))
 mac = devices.get(choice)[1]
-os = input("What Operating system are you using?\n 1 Windows\n 2 Linux \n>>> ")
+os = input(f"\nSpoofing {mac}\nWhat Operating system are you using?\n 1 Windows\n 2 Linux \n>>> ")
 if os == "2":
     interface = input("Pleace specify your network interface >>> ")
     try:

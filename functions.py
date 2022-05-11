@@ -2,7 +2,7 @@ import scapy.all as scapy
 import requests
 import socket
 import re
-import time
+from colorama import Fore, Style
 
 def find_ip_range():
     hostname = socket.gethostname()
@@ -16,7 +16,7 @@ def arp(ip):
     if ip == "":
         ip = find_ip_range()
         print("Autodetected IP range")
-    print(f"Using IP range: {ip}")
+    print(f"{Fore.GREEN}Using IP range:{Fore.YELLOW} {ip} {Style.RESET_ALL}")
     arp_r = scapy.ARP(pdst=ip)
     br = scapy.Ether(dst='ff:ff:ff:ff:ff:ff')
     request = br/arp_r
