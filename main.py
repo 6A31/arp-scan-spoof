@@ -1,5 +1,5 @@
 
-from functions import arp, check_conn
+from functions import arp, check_conn, wait_for_close
 from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows
 
 
@@ -45,3 +45,5 @@ choice = input("Would you like to test the Internet connection? y/n >>> ")
 if choice.lower() == "y":
     attempts = int(input("How many attempts should be made? >>> "))
     check_conn(attempts)
+
+wait_for_close() # Wait's 20 seconds to keep the windows executable window open

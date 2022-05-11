@@ -3,7 +3,7 @@ import re
 import uuid
 from colorama import Fore, Style
 import winreg
-import codecs
+
 
 
 def change_mac_linux(new_mac=None, interface=None):

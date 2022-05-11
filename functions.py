@@ -50,3 +50,6 @@ def check_conn(attempts, delay=1.5):
         except:
             print(f"{Fore.RED}Failed connection attempt {i}{Style.RESET_ALL}")
             time.sleep(delay)
+
+def wait_for_close():
+    time.sleep(20)
