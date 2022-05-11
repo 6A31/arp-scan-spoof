@@ -1,4 +1,3 @@
-from logging import exception
 import subprocess as sub
 import re
 import uuid
@@ -10,7 +9,7 @@ def change_mac_linux(new_mac=None, interface=None):
 
 
     if not interface:
-        exception(f"\n\n{Fore.RED}Could not change MAC address. ERR: No interface supplied{Style.RESET_ALL}")
+        print(f"\n\n{Fore.RED}Could not change MAC address. ERR: No interface supplied{Style.RESET_ALL}")
         return
 
     print('\n[+] Changing the MAC Address to', new_mac)
