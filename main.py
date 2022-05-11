@@ -29,7 +29,7 @@ choice = input("Would you like to verify if the changes were applied successfull
 if choice == "y":
     if os == "2":
         try:
-            print(f"Your current MAC is {check_mac_linux(interface)}. You selected {mac} Earlier.")
+            print(f"Your current MAC is {check_mac_linux(interface)}. You selected {mac} earlier.")
         except:
             print("Failed to check MAC")
     
