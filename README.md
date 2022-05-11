@@ -3,7 +3,8 @@
 
 **Bypass guest logins in free WiFi by spoofing a MAC address of an already registered device.**
 
-**Python 3**
+Requires Python 3!
+
 -------------
 
 # Script
