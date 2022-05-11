@@ -1,5 +1,5 @@
 
-from functions import arp
+from functions import arp, check_conn
 from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows
 
 
@@ -27,7 +27,7 @@ if os == "1":
         print("Failed.")
 
 choice = input("Would you like to verify if the changes were applied successfully? y/n >>> ")
-if choice == "y":
+if choice.lower() == "y":
     if os == "2":
         try:
             print(f"Your current MAC is {check_mac_linux(interface)}. You selected {mac} earlier.")
@@ -39,3 +39,9 @@ if choice == "y":
             check_mac_windows()
         except:
             print("Failed to check MAC")
+
+choice = input("Would you like to test the Internet connection? y/n >>> ")
+
+if choice.lower() == "y":
+    attempts = int(input("How many attempts should be made? >>> "))
+    check_conn(attempts)

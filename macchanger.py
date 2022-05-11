@@ -21,13 +21,13 @@ def change_mac_linux(new_mac=None, interface=None):
 
 def check_mac_linux(iface):
     output = subprocess.check_output(f"ifconfig {iface}", shell=True).decode()
-    return re.search("ether (.+) ", output).group().split()[1].strip()
+    print(re.search("ether (.+) ", output).group().split()[1].strip())
 
 def check_mac_windows():
-    print (f"Your current MAC address is: {Fore.GREEN}", end="")
+    print (f"\nYour current MAC address is: {Fore.GREEN}", end="")
     print (':'.join(['{:02x}'.format((uuid.getnode() >> ele) & 0xff)
     for ele in range(0,8*6,8)][::-1]))
-
+    print(Style.RESET_ALL) # Don't know how to add this to the other line...
 
 def change_mac_windows(new_mac):
 
@@ -113,7 +113,7 @@ def change_mac_windows(new_mac):
 
     # Create a simple menu so the user can pick a MAC address to use
     while True:
-        print("Which MAC address do you want to use? This will change the Network Card's MAC address.\n" + Fore.RED + "This is the MAC address you selected earlier. Select it with " + Fore.GREEN + ' "0"' + Style.RESET_ALL)
+        print("Which MAC address do you want to use? This will change the Network Card's MAC address.\n" + Fore.RED + "\nThis is the MAC address you selected earlier. Select it with " + Fore.GREEN + ' "0"' + Style.RESET_ALL)
         for index, item in enumerate(mac_to_change_to):
             print(f"{index} - Mac Address: {item}")
 

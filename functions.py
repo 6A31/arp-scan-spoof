@@ -1,7 +1,9 @@
 import scapy.all as scapy
 import socket
 import re
+import time
 from colorama import Fore, Style
+import requests
 
 from mac_vendor_lookup import MacLookup
 
@@ -38,3 +40,14 @@ def lookup_vendor(mac):
         return MacLookup().lookup(mac)
     except:
         return "No Vendor"
+
+def check_conn(attempts, delay=0.5):
+    for i in range(attempts):
+        try:
+            requests.get("https://google.com", timeout=3000)
+            time.sleep(delay)
+            print(f"\n{Fore.GREEN}Attempt {i} Successful{Style.RESET_ALL}")
+            break
+        except:
+            print(f"{Fore.RED}Failed connection attempt {i}{Style.RESET_ALL}")
+            time.sleep(delay)
