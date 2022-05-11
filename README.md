@@ -3,6 +3,7 @@
 
 **Bypass guest logins in free WiFi by spoofing a MAC address of an already registered device.**
 
+**Python 3**
 -------------
 
 # Script
@@ -13,7 +14,7 @@ Using mc-vendor-lookup it is easy to determine what devices are phones, computer
 
 The script was tested on **Windows 10 and Linux (Ubuntu)**.
 
-**Dependencies: `scapy`, `colorama`, `requests`, `mac-vendor-lookup`, `winreg`, `re`**
+**Dependencies: `python3`, `scapy`, `colorama`, `requests`, `mac-vendor-lookup`, `winreg`, `re`**
 
 
 > If you get an `Module Error` try installing the module with `pip install modulenamhere`
@@ -37,7 +38,7 @@ Make sure to have all files in the same folder when running `main.py`.
 
 ## Support
 
-Talk to me on [Discord](https://discord.6A31.com)
+**Talk to me on [Discord](https://discord.6A31.com)**
 
 ## FAQ
 
@@ -49,5 +50,18 @@ I'm getting X Y and Z Error.
 
 ## Example use case
 
-**COMING SOON**
+Picture this, you're sitting in a Café and you see, lucky you, a free guest WiFi.
+You connect to it expecting to have a simple web access only to find yourself prompted with a "sign up page".
 
+Because you're not a fan of spam emails, you don't feel like entering your email, or even worse, your phone number.
+
+**but fear no more,** someone came to save the day. You can simply bypass the registration by following those steps.
+
+1. Clone the repository
+2. Connect to the guest WiFi
+3. Run `main.py`
+4. Don't supply an IP range to use the auto detection
+5. Pick a device that seems like it's a computer or a phone. (take the Vendor as help)
+6. Spoof their MAC address
+7. Wait for your device to reconnect to the guest WiFi (allow up to a minute)
+8. **Enjoy your free guest WiFi**
