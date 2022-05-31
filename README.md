@@ -13,7 +13,7 @@ This script features auto IP range detection, MAC address vendor check (works of
 
 Using mc-vendor-lookup it is easy to determine what devices are phones, computers and routers. By using the compact console output layout, it is easy to select and spoof a desired device.
 
-The script was tested on **Linux (Ubuntu)**.
+The script was tested on **Windows 10 + Linux (Ubuntu)**.
 
 **Dependencies: `python3`, `scapy`, `colorama`, `requests`, `mac-vendor-lookup`, `winreg`, `re`**
 
