@@ -3,7 +3,7 @@
 
 **Bypass guest logins in free WiFi by spoofing a MAC address of an already registered device.**
 
-Requires Python 3!
+Requires Python 3! *check out the sample usecase down [below](https://github.com/ScobraScope/arp-scan-spoof#example-use-case)
 
 -------------
 
