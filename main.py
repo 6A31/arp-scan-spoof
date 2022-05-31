@@ -1,6 +1,6 @@
 
 from functions import arp, check_conn, wait_for_close
-from macchanger import change_mac_windows, change_mac_linux, check_mac_linux, check_mac_windows
+from macchanger import change_mac_linux, check_mac_linux, check_mac_windows
 
 
 givenip = input("IP RANGE. | Leave empty for auto-detection >>> ")
@@ -22,7 +22,7 @@ if os == "2":
         print("Failed.")
 if os == "1":
     try:
-        change_mac_windows(mac)
+        print("Sorry, Windows is not currently supported. You can still check your windows MAC address.")
     except:
         print("Failed.")
 

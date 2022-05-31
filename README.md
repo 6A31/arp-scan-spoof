@@ -13,7 +13,7 @@ This script features auto IP range detection, MAC address vendor check (works of
 
 Using mc-vendor-lookup it is easy to determine what devices are phones, computers and routers. By using the compact console output layout, it is easy to select and spoof a desired device.
 
-The script was tested on **Windows 10 and Linux (Ubuntu)**.
+The script was tested on **Linux (Ubuntu)**.
 
 **Dependencies: `python3`, `scapy`, `colorama`, `requests`, `mac-vendor-lookup`, `winreg`, `re`**
 
@@ -25,7 +25,7 @@ Download the [.EXE](https://github.com/ScobraScope/arp-scan-spoof/releases/tag/s
 
 
 ## Windows
-Make sure to run the script as administrator on Windows. Changing a MAC address requires admin privileges.
+Make sure to run the script as administrator on Windows. Sniffing requires admin privileges.
 
 
 ## Linux
