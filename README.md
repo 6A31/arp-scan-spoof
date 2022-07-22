@@ -15,7 +15,7 @@ Using mc-vendor-lookup it is easy to determine what devices are phones, computer
 
 The script was tested on **Windows 10 + Linux (Ubuntu)**.
 
-**Dependencies: `python3`, `scapy`, `colorama`, `requests`, `mac-vendor-lookup`, `winreg`, `re`**
+**Dependencies: `python3`, `scapy`, `colorama`, `requests`, `mac-vendor-lookup`**
 
 
 > If you get an `Module Error` try installing the module with `pip install modulenamhere`
